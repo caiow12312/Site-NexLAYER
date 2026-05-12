@@ -256,7 +256,7 @@ section{
     padding-right: 5%;
     padding-top: 5%;
     align-items: center;
-    background-image: url(/img/back3.png);
+    background-image: url(img/back3.png);
     background-position: center;
     background-size: cover;
     .futuro{
@@ -317,7 +317,7 @@ section{
 .secao3{
     height: 100dvh;
     padding-top: 2%;
-    background-image: url(/img/back3.png);
+    background-image: url(img/back3.png);
     background-size: cover;
     background-position: center;
     .divCaracteristicas{
@@ -357,7 +357,7 @@ section{
 .secao4{
     height: 100dvh;
     padding-top: 2%;
-    background-image: url(/img/back3.png);
+    background-image: url(img/back3.png);
     background-size: cover;
     background-position: center;
     .divCaracteristicas2{
@@ -397,7 +397,7 @@ section{
 .secao5{
     height: 100dvh;
     padding-top: 2%;
-    background-image: url(/img/back3.png);
+    background-image: url(img/back3.png);
     background-size: cover;
     background-position: center;
     .divCaracteristicas3{
@@ -438,7 +438,7 @@ section{
     height: 100dvh;
     position: relative;
     display: flex;
-    background-image: url(/img/back3.png);
+    background-image: url(img/back3.png);
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -473,7 +473,7 @@ section{
 }
 .secao7{
     height: 100dvh;
-    background-image: url(/img/back3.png);
+    background-image: url(img/back3.png);
     background-position: center;
     background-size: cover;
     .tituloImgc{
@@ -540,7 +540,7 @@ section{
     display: flex;
     position: relative;
     align-items: center;
-    background-image: url(/img/back3.png);
+    background-image: url(img/back3.png);
     background-size: cover;
     background-position: center;
     .divSoftware{
@@ -576,7 +576,7 @@ section{
     height: 100dvh;
     display: flex;
     position: relative;
-    background-image: url(/img/back3.png);
+    background-image: url(img/back3.png);
     background-size: cover;
     background-position: center;
     .divEquipe{
