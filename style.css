@@ -615,6 +615,7 @@ section{
 @media(max-width: 450px){
 .secao1{
     height: 35dvh;
+    background-image: url(img/untitled.png);
     background-position: center;
     background-size: 85%;
     .tituloSecao1{
