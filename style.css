@@ -1,18 +1,18 @@
 @font-face {
     font-family: titulos;
-    src: url(/fonts/Akira\ Expanded\ Demo.otf);
+    src: url(/fonts/Akira\ Expanded\ Demo.otf) format('opentype');
 }
 @font-face {
     font-family: titulos-2;
-    src: url(/fonts/BigersideExpanded.otf);
+    src: url(/fonts/BigersideExpanded.otf) format('opentype')
 }
 @font-face {
     font-family: subtitulos;
-    src: url(/fonts/bgothl.ttf);
+    src: url(/fonts/bgothl.ttf) format('truetype');
 }
 @font-face {
     font-family: paragrafos;
-    src: url(/fonts/Conthrax-SemiBold.otf);
+    src: url(/fonts/Conthrax-SemiBold.otf) format('opentype');
 }
 *{
     margin: 0;
