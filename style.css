@@ -69,7 +69,7 @@ section{
     display: flex;
     position: relative;
     align-items: center;
-    background-image: url(/img/untitled.png);
+    background-image: url(img/untitled.png);
     background-position: 15dvw 3dvh;
     background-size: 85%;
     background-repeat: no-repeat;
