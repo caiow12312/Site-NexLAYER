@@ -613,6 +613,18 @@ section{
     }
 }
 @media(max-width: 450px){
+header{
+    position: absolute;
+    padding: 4%;
+    ul{
+        padding: .125%;
+        border-radius: .5dvh;
+        backdrop-filter: blur(2.5em);
+        a{
+            font-size: .5em;
+            }
+        }
+ }
 .secao1{
     height: 35dvh;
     background-image: url(img/untitled.png);
