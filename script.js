@@ -68,3 +68,21 @@ function digitar() {
 
 // Inicia a função
 digitar();
+
+
+
+const observadorNomes = new IntersectionObserver((entradas) => {
+  entradas.forEach((entry) => {
+    if(entry.isIntersecting){
+        entry.target.classList.add('visivel')
+        entry.target.classList.remove('naovisivel')
+    }else{
+        entry.target.classList.remove('visivel')
+        entry.target.classList.add('naovisivel')  
+    }
+  })
+})
+
+const nomesEquipe = document.querySelectorAll('.naovisivel')
+
+nomesEquipe.forEach((nomeEquipe) => observadorNomes.observe(nomeEquipe))

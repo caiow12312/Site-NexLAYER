@@ -44,6 +44,7 @@ header{
         display: flex;
         padding: .5%;
         border-radius: 1dvh;
+        gap: .6dvw;
         backdrop-filter: blur(5em);
         a{
             list-style-type: none;
@@ -68,22 +69,22 @@ section{
     justify-content: center;
     display: flex;
     position: relative;
-    align-items: center;
-    background-image: url(img/untitled.png);
+    background-image: url(img/backInicial.png);
     background-position: 15dvw 3dvh;
     background-size: 85%;
     background-repeat: no-repeat;
     height: 100dvh;
     .tituloSecao1{
     height: max-content;
-    width: 100%;
+    width: fit-content;
     z-index: 1;
     padding-left: 5%;
     h1{
+        animation: brilhoInicial 2s;
         font-family: titulos;
+        text-shadow: 0 0 2vh var(--colorBrancoFraco);
         letter-spacing: -2px;
         color: #ededed;
-        text-shadow: 0 0 4vh var(--colorBrancoFraco);
         font-size: clamp(.5em, 1em + 4vw + 4vh, 10.5em);
         }
 }
@@ -104,159 +105,13 @@ section{
         animation: piscar .7s infinite;
     }
 }
-/*Gradientes*/
-.secao1::before{ 
-    content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.616));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.secao2::before{
-    content:"";
-    background: linear-gradient(black, rgba(0, 0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.secao2::after{
-    content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.secao3::before{
-    content:"";
-    background: linear-gradient(black, rgba(0, 0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.secao3::after{
-    content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.secao4::before{
-    content:"";
-    background: linear-gradient(black, rgba(0, 0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.secao4::after{
-    content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.secao5::before{
-    content:"";
-    background: linear-gradient(black, rgba(0, 0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.secao5::after{
-    content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.secao6::before{
-    content:"";
-    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.secao6::after{
-    content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.secao7::before{
-    content:"";
-    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.secao7::after{
-    content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.secao8::before{
-    content:"";
-    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.secao8::after{
-    content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.secao9::before{
-    content:"";
-    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
-    height: 50dvh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-/*fim Gradientes*/
 .secao2{
     height: 100dvh;
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 5%;
     align-items: center;
-    background-image: url(img/back3.png);
+    background-image: url(img/backGeral.png);
     background-position: center;
     background-size: cover;
     .futuro{
@@ -317,7 +172,7 @@ section{
 .secao3{
     height: 100dvh;
     padding-top: 2%;
-    background-image: url(img/back3.png);
+    background-image: url(img/backGeral.png);
     background-size: cover;
     background-position: center;
     .divCaracteristicas{
@@ -357,7 +212,7 @@ section{
 .secao4{
     height: 100dvh;
     padding-top: 2%;
-    background-image: url(img/back3.png);
+    background-image: url(img/backGeral.png);
     background-size: cover;
     background-position: center;
     .divCaracteristicas2{
@@ -397,7 +252,7 @@ section{
 .secao5{
     height: 100dvh;
     padding-top: 2%;
-    background-image: url(img/back3.png);
+    background-image: url(img/backGeral.png);
     background-size: cover;
     background-position: center;
     .divCaracteristicas3{
@@ -438,7 +293,7 @@ section{
     height: 100dvh;
     position: relative;
     display: flex;
-    background-image: url(img/back3.png);
+    background-image: url(img/backGeral.png);
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -473,7 +328,7 @@ section{
 }
 .secao7{
     height: 100dvh;
-    background-image: url(img/back3.png);
+    background-image: url(img/backGeral.png);
     background-position: center;
     background-size: cover;
     .tituloImgc{
@@ -526,12 +381,9 @@ section{
             border: none;
             padding: .3em;
             border-radius: .3em;
-            background-color: rgb(116, 116, 116);
-            color: rgb(255, 255, 255);
+            background: linear-gradient(45deg,white, rgb(155, 155, 155));
+            color: rgb(0, 0, 0);
             transition: all .4s;
-            &:hover{
-                font-size: 1.4em;
-            }
         }
 }
 }
@@ -540,10 +392,13 @@ section{
     display: flex;
     position: relative;
     align-items: center;
-    background-image: url(img/back3.png);
+    background-image: url(img/backSoftware.jpg);
     background-size: cover;
     background-position: center;
     .divSoftware{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
     z-index: 1;
     h1{
         padding-top: 5%;
@@ -553,21 +408,25 @@ section{
         font-size: 6em;
     }
     .nossoProjeto{
-        display: flex;
+        width: fit-content;
         justify-content: center;
     p{
-        padding-top: 4%;
+        padding: 2%;
+        border-radius: 1rem;
+        background-color: rgba(141, 141, 141, 0.988);
+        box-shadow: 0 0 1dvw var(--colorCinza);
+        margin-top: 4%;
         color: #ededed;
         text-align: center;
         font-family: subtitulos;
         font-size: 1.8em;
-        padding-left: 12%;
-        padding-right: 12%;
+        margin-left: 12%;
+        margin-right: 12%;
     }
     a{
         text-shadow: 0 0 .3em var(--colorCinza);
         text-decoration-line: none;
-        color: rgb(85, 85, 85);
+        color: rgb(72, 0, 255);
     }
 }
 }
@@ -576,7 +435,7 @@ section{
     height: 100dvh;
     display: flex;
     position: relative;
-    background-image: url(img/back3.png);
+    background-image: url(img/backGeral.png);
     background-size: cover;
     background-position: center;
     .divEquipe{
@@ -602,9 +461,23 @@ section{
         flex-direction: column;
         height: 100%;
         padding: 5%;
+        align-items: center;
+        .visivel{
+            opacity: 1;
+            transition: all 1s;
+            filter: blur(0);
+            transform: translateX(0);
+        }
+        .naovisivel{
+            opacity: 0;
+            filter: blur(.6em);
+            transition: all 1s;
+            transform: translateX(-10dvw);
+        }
         p{
+            width: fit-content;
             padding-top: .5%;
-            text-align: left;
+            text-align: center;
             color: #ededed;
             font-size: 3em;
             letter-spacing: 10px;
@@ -612,6 +485,152 @@ section{
         }
     }
 }
+/*Gradientes*/
+.secao1::before{ 
+    content:"";
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(17, 17, 17));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.secao2::before{
+    content:"";
+    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.secao2::after{
+    content:"";
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.secao3::before{
+    content:"";
+    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.secao3::after{
+    content:"";
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.secao4::before{
+    content:"";
+    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.secao4::after{
+    content:"";
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.secao5::before{
+    content:"";
+    background: linear-gradient(rgb(19,19,19), rgba(0, 0, 0, 0));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.secao5::after{
+    content:"";
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.secao6::before{
+    content:"";
+    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.secao6::after{
+    content:"";
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.secao7::before{
+    content:"";
+    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.secao7::after{
+    content:"";
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.secao8::before{
+    content:"";
+    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.secao8::after{
+    content:"";
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.secao9::before{
+    content:"";
+    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*fim Gradientes*/
 @media(max-width: 450px){
 header{
     position: absolute;
@@ -864,5 +883,13 @@ header{
     }
   100% {
      opacity: 1;
+    }
+}
+@keyframes brilhoInicial {
+  0% {
+     text-shadow: 0 0 10vh var(--colorBranco);
+    }
+  100% {
+     text-shadow: 0 0 2vh var(--colorBrancoFraco);
     }
 }
