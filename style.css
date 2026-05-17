@@ -22,15 +22,10 @@
 html{
     scroll-behavior: smooth;
 }
-:root{
-    --colorAzul: blue;
-    --colorBranco: rgb(255, 255, 255);
-    --colorCinza: rgb(85, 85, 85);
-    --colorBrancoFraco: rgba(255, 255, 255, 0.427);
-}
 body{
     background-color: rgb(0, 0, 0);
     background-position: center;
+    cursor: none;
 }
 header{
     width: 100%;
@@ -38,7 +33,7 @@ header{
     position: fixed;
     padding: 1%;
     z-index: 100;
-    justify-content: right;
+    justify-content: end;
     align-items: center;
     ul{
         display: flex;
@@ -52,12 +47,25 @@ header{
             text-decoration-line: none;
             color: rgb(194, 194, 194);
             transition: all .5s;
+            cursor: none;
             &:hover{
                 color: white;
-                text-shadow: 0 0 10px var(--colorBranco);
+                text-shadow: 0 0 1em white;
             }
         }
     }
+}
+.cursor{
+      position: fixed;
+      width: 1em;
+      height: 1em;
+      background: white;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 1em rgba(255,255,255,0.8);
+      z-index: 9999;
+      transition: transform 0.05s linear;
 }
 section{
     width: 100%;
@@ -69,8 +77,8 @@ section{
     justify-content: center;
     display: flex;
     position: relative;
-    background-image: url(img/backInicial.png);
-    background-position: 15dvw 3dvh;
+    background-image: url(img/untitled.png);
+    background-position: 20dvw -1em;
     background-size: 85%;
     background-repeat: no-repeat;
     height: 100dvh;
@@ -80,11 +88,10 @@ section{
     z-index: 1;
     padding-left: 5%;
     h1{
-        animation: brilhoInicial 2s;
-        font-family: titulos;
-        text-shadow: 0 0 2vh var(--colorBrancoFraco);
+        font-family: paragrafos;
+        text-shadow: 0 0 2vh #004c6c4d, 0 0 6vh #00566c61, 0 0 7vh #12006c2b;
         letter-spacing: -2px;
-        color: #ededed;
+        color: rgb(0, 157, 255);
         font-size: clamp(.5em, 1em + 4vw + 4vh, 10.5em);
         }
 }
@@ -96,7 +103,7 @@ section{
         z-index: 1;
         justify-content: left;
         font-family: subtitulos;
-        color: rgb(219, 219, 219);
+        color: rgb(0, 157, 255);
         font-size: clamp(0.5em, 0.5em + 1vw + 1vh, 3em);
     }
     .texto::after{
@@ -128,6 +135,9 @@ section{
         color: aliceblue;
         font-family: paragrafos;
         font-size: clamp(.25em, 1em + 2vw + 2vh, 4em);
+        animation: aparecer;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
     }
     p{
         padding-top: 1%;
@@ -136,6 +146,9 @@ section{
         font-family: subtitulos;
         font-size: clamp(.125em, 1em + 1vw + 1vh, 1.5em);
         justify-content: center;
+        animation: aparecer;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
 }
 }
     .divDesceImg{
@@ -148,26 +161,28 @@ section{
         height: 45dvh;
         border-radius: 1em;
         box-shadow: 0 0 3dvh var(--colorCinza);
-        transition: all .3s;
-        &:hover{
-            height: 50dvh;
-            box-shadow: 0 0 3dvh var(--colorBranco);
+        animation: aparecer;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
         }
     }
     }
     .divLegenda{
     display: flex;
+    align-items: center;
     justify-content: space-around;
         p{
             font-family: subtitulos;
             font-size: 1.5em;
             margin-top: 2%;
             color: #ededed;
+            animation: aparecer;
+            animation-timeline: view();
+            animation-range: entry 0% cover 15%;
         }
 
 
     }
-}
 }
 .secao3{
     height: 100dvh;
@@ -187,6 +202,9 @@ section{
             text-align: left;
             font-size: 8em;
             font-family: paragrafos;
+            animation: surgirEsquerda;
+            animation-timeline: view();
+            animation-range: entry 0% cover 35%;
         }
         .exp{
             width: fit-content;
@@ -203,6 +221,10 @@ section{
             color: #ededed;
             font-family: subtitulos;
             font-size: 1.5em;
+            overflow: hidden;
+            animation: surgirDireita;
+            animation-timeline: view();
+            animation-range: entry 0% cover 35%;
         }
 
 
@@ -227,6 +249,9 @@ section{
             text-align: left;
             font-size: 8em;
             font-family: paragrafos;
+        animation: surgirEsquerda;
+            animation-timeline: view();
+            animation-range: entry 0% cover 35%;
         }
         .exp2{
             width: fit-content;
@@ -243,6 +268,10 @@ section{
             color: #ededed;
             font-family: subtitulos;
             font-size: 1.5em;
+            overflow: hidden;
+            animation: surgirDireita;
+            animation-timeline: view();
+            animation-range: entry 0% cover 35%;
         }
 
 
@@ -267,6 +296,9 @@ section{
             text-align: left;
             font-size: 8em;
             font-family: paragrafos;
+            animation: surgirEsquerda;
+            animation-timeline: view();
+            animation-range: entry 0% cover 35%;
         }
         .exp3{
             width: fit-content;
@@ -283,6 +315,10 @@ section{
             color: #ededed;
             font-family: subtitulos;
             font-size: 1.5em;
+            overflow: hidden;
+            animation: surgirDireita;
+            animation-timeline: view();
+            animation-range: entry 0% cover 35%;
         }
 
 
@@ -320,11 +356,42 @@ section{
         video{
             height: 65vh;
             border-radius: .5em;
-            box-shadow: 0 0 3dvh var(--colorBranco);
+            box-shadow: 0 0 2rem rgba(0, 157, 255, 0.14), 0 0 3rem rgba(0, 94, 255, 0.079);
         }
 
 
     }
+}
+.secao6-2{
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    background-image: url(img/backGeral.png);
+    background-size: cover;
+    background-position: center;
+    .tituloSec6-2{
+    z-index: 1;
+    margin-top: 1dvh;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 1dvh;
+        h1{
+            text-align: center;
+            font-family: paragrafos;
+            font-size: 6em;
+            color: #ffffff;
+        }
+        p{
+            text-align: center;
+            font-family: paragrafos;
+            font-size: 2em;
+            color: #ffffff;
+        }
+    }
+
+
+
 }
 .secao7{
     height: 100dvh;
@@ -360,7 +427,7 @@ section{
     }
     img.ativo{
             opacity: 1;
-            box-shadow: 0 0 1rem var(--colorBranco);
+            box-shadow: 0 0 2rem rgba(0, 157, 255, 0.514), 0 0 3rem rgba(0, 94, 255, 0.497);
         }
 }
     .imgCarrossel img:not(:first-child){
@@ -375,15 +442,20 @@ section{
         align-items: center;
         gap:1dvw;
         button{
-            
+            cursor: none;
             font-family: subtitulos;
             font-size: 1.3em;
             border: none;
             padding: .3em;
             border-radius: .3em;
-            background: linear-gradient(45deg,white, rgb(155, 155, 155));
-            color: rgb(0, 0, 0);
+            background: transparent;
+            color: rgba(235, 235, 235, 0.742);
             transition: all .4s;
+            backdrop-filter: blur(2em);
+            &:hover{
+                color: white;
+                text-shadow: 0 0 1em white;
+            }
         }
 }
 }
@@ -424,9 +496,8 @@ section{
         margin-right: 12%;
     }
     a{
-        text-shadow: 0 0 .3em var(--colorCinza);
-        text-decoration-line: none;
-        color: rgb(72, 0, 255);
+        text-decoration-line: underline;
+        color: rgb(0, 166, 255);
     }
 }
 }
@@ -462,18 +533,7 @@ section{
         height: 100%;
         padding: 5%;
         align-items: center;
-        .visivel{
-            opacity: 1;
-            transition: all 1s;
-            filter: blur(0);
-            transform: translateX(0);
-        }
-        .naovisivel{
-            opacity: 0;
-            filter: blur(.6em);
-            transition: all 1s;
-            transform: translateX(-10dvw);
-        }
+
         p{
             width: fit-content;
             padding-top: .5%;
@@ -485,10 +545,43 @@ section{
         }
     }
 }
+.visivel{
+    opacity: 1;
+    transition: all 1s;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.naovisivel{
+    opacity: 0;
+    filter: blur(.6em);
+    transition: all 1s;
+    transform: translateX(-10dvw);
+}
+.naovisivel2{
+    opacity: 0;
+    filter: blur(.6em);
+    transition: all 1s;
+    transform: translatey(-10dvh);
+}
+.secaoCreditos{
+    height: 10dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(19, 19, 19);
+    .divCreditos{
+        p{  
+            text-align: center;
+            font-family: subtitulos;
+            color: #ededed;
+            font-size: 1.5rem;
+        }
+    }
+}
 /*Gradientes*/
 .secao1::before{ 
     content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(17, 17, 17));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -497,7 +590,7 @@ section{
 }
 .secao2::before{
     content:"";
-    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -506,7 +599,7 @@ section{
 }
 .secao2::after{
     content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -515,7 +608,7 @@ section{
 }
 .secao3::before{
     content:"";
-    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -524,7 +617,7 @@ section{
 }
 .secao3::after{
     content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -533,7 +626,7 @@ section{
 }
 .secao4::before{
     content:"";
-    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -542,7 +635,7 @@ section{
 }
 .secao4::after{
     content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -551,7 +644,7 @@ section{
 }
 .secao5::before{
     content:"";
-    background: linear-gradient(rgb(19,19,19), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -560,7 +653,7 @@ section{
 }
 .secao5::after{
     content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -569,7 +662,7 @@ section{
 }
 .secao6::before{
     content:"";
-    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -578,7 +671,25 @@ section{
 }
 .secao6::after{
     content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.secao6-2::before{
+    content:"";
+    background: linear-gradient(rgb(0, 0, 0), rgba(19, 19, 19, 0));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.secao6-2::after{
+    content:"";
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -587,7 +698,7 @@ section{
 }
 .secao7::before{
     content:"";
-    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -596,7 +707,7 @@ section{
 }
 .secao7::after{
     content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -605,7 +716,7 @@ section{
 }
 .secao8::before{
     content:"";
-    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -614,7 +725,7 @@ section{
 }
 .secao8::after{
     content:"";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
@@ -623,11 +734,20 @@ section{
 }
 .secao9::before{
     content:"";
-    background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
     height: 50dvh;
     width: 100%;
     position: absolute;
     top: 0;
+    left: 0;
+}
+.secao9::after{
+    content:"";
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    height: 50dvh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
     left: 0;
 }
 /*fim Gradientes*/
@@ -643,10 +763,12 @@ header{
             font-size: .5em;
             }
         }
- }
+}
+body{
+    cursor: auto;
+}
 .secao1{
     height: 35dvh;
-    background-image: url(img/untitled.png);
     background-position: center;
     background-size: 85%;
     .tituloSecao1{
@@ -791,7 +913,7 @@ header{
 }
 }
 .secao8{
-    height: 30dvh;
+    height: 40dvh;
     .divSoftware{
     h1{
         font-size: 2em;
@@ -808,7 +930,6 @@ header{
 .secao9{
     height: 40dvh;
     .divEquipe{
-    
     h2{
         padding-top: 0;
         font-size: 2em;
@@ -818,10 +939,20 @@ header{
     }
 }
     .nomes{
-        padding-top: 5%;
+        margin-top: 15%;
         p{
-            font-size:.5em;
+            font-size: 1em;
             
+        }
+    }
+}
+.secaoCreditos{
+    height: 25dvh;
+    justify-content: start;
+    .divCreditos{
+        p{  
+            
+            font-size: 1rem;
         }
     }
 }
@@ -873,6 +1004,9 @@ header{
 .secao9::before{
     height: 17.5dvh;
 }
+.secao9::after{
+    height: 17.5dvh;
+}
 }
 @keyframes piscar {
   0% {
@@ -885,11 +1019,21 @@ header{
      opacity: 1;
     }
 }
-@keyframes brilhoInicial {
-  0% {
-     text-shadow: 0 0 10vh var(--colorBranco);
+@keyframes aparecer {
+    from{
+        opacity: .3;
+        scale: .8;
     }
-  100% {
-     text-shadow: 0 0 2vh var(--colorBrancoFraco);
+}
+@keyframes surgirEsquerda {
+    from{
+        transform: translateX(-10dvw);
+        filter: blur(.1em);
+    }
+}
+@keyframes surgirDireita {
+    from{
+        transform: translateX(2.5dvw);
+        filter: blur(.1em);
     }
 }

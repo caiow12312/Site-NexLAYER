@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressora 3D NexLayer</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,7 @@
             </ul>    
     </header>
 <body>
+    <div class="cursor"></div>
     <!--Seção Inicial-->
     <section class="secao1">
         <div class="tituloSecao1">
@@ -83,20 +84,40 @@
             <video poster="img/capaVideo.jpg" loop controls src="video/video.mp4"></video>
         </div>
     </section>
+    <section class="secao6-2">
+        <div class="tituloSec6-2">
+            <h1>Lista de Materiais</h1>
+            <p class="naovisivel2">1 Arduino Mega 2560;</p>
+            <p class="naovisivel2">1 Placa de Expansão RAMPS 1.6;</p>
+            <p class="naovisivel2">128x64 LCD Display;</p>
+            <p class="naovisivel2">Peças Impressas em 3D;</p>
+            <p class="naovisivel2">4 Drivers DRV8225;</p>
+            <p class="naovisivel2">1 Fonte de Alimentação 12 Volts e 20 Amperes;</p>
+            <p class="naovisivel2">4 Motores de Passo NEMA 17;</p>
+            <p class="naovisivel2">Roldanas V Slots;</p>
+            <p class="naovisivel2">Fuso Trapezoidal;</p>
+            <p class="naovisivel2">Acoplamentos;</p>
+            <p class="naovisivel2">Parafusos, porcas e arruelas;</p>
+            <p class="naovisivel2">Perfis de Alumínio V Slot 20X20 20X40</p>
+        </div>
+    </section>
     <section class="secao7">
         <div class="tituloImgc">
-            <h1>Imagens de Criação</h1>
+            <h1>Imagens do Processo de Criação</h1>
             <div class="imgCarrossel">
-                <img class="img1 ativo" src="img/imgcriacao1.jpg" alt="">
-                <img class="img2" src="img/imgcriacao2.jpg" alt="">
+                <img class="img1 ativo" src="img/imgcriacao5.jpg" alt="">
+                <img class="img2" src="img/imgcriacao4.jpg" alt="">
                 <img class="img3" src="img/imgcriacao3.jpg" alt="">
-                <img class="img4" src="img/imgcriacao4.jpg" alt="">
-                <img class="img5" src="img/imgcriacao5.jpg" alt="">
+                <img class="img4" src="img/imgcriacao2.jpg" alt="">
+                <img class="img5" src="img/imgcriacao1.jpg" alt="">
             </div>
         </div>
         <div class="nav">
-            <button class="anterior">Anterior</button>
-            <button class="proximo">Próximo</button>
+            <button class="anterior" id="somBotaoAnterior">Anterior</button>
+            <button class="proximo" id="somBotaoProximo">Próximo</button>
+
+            <audio src="sounds/somBotao.mp3" id="som"></audio>
+
         </div>
     </section>
     <!--Fim Seção Criação NexLayer-->
@@ -114,7 +135,7 @@
    <section class="secao9" id="equipe">
         <div class="divEquipe">
             <h2>EQUIPE</h2>
-            <p>Somos alunos da<br> ETPC(Escola Técnica Pandiá Calógeras)<br> do curso técnico de MECATRÔNICA.</p>
+            <p>Somos alunos da ETPC(Escola Técnica Pandiá Calógeras)<br> do curso técnico de MECATRÔNICA. Atualmente estamos no 2º do curso.</p>
         </div>
         <div class="nomes">
                 <p class="naovisivel">CAIO GRACILIANO</p>
@@ -126,7 +147,12 @@
         </div>
    </section>
    <!--Fim Seção Equipe NexLayer-->
-   
+   <!--Créditos-->
+   <section class="secaoCreditos">
+    <div class="divCreditos">
+        <p>Site desenvolvido por Caio Graciliano. <br>2026 PT-BR</p>
+    </div>
+   </section>
    <script src="script.js"></script>
 </body>
 </html> 
