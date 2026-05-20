@@ -861,7 +861,7 @@ body{
             font-size: 3em;
         }
         .exp3{
-            padding-left: 25%;
+            padding-left: 12%;
         p{
             font-size: .5em;
         }
@@ -899,7 +899,7 @@ body{
     }
 }
 .secao7{
-    height: 35dvh;
+    height: 40dvh;
     .tituloImgc{
     h1{
         font-size: 1.5em;
@@ -908,19 +908,17 @@ body{
     .imgCarrossel{
         padding-top: 2em;
     img{
-        height: 10rem;
+        height: 12rem;
 
     }
 }
     .nav{
         gap:3dvw;
-        padding-top: 2.5dvh;
+        padding-top: 2dvh;
         button{
             
             font-size: 1em;
             padding: .4em;
-            &:hover{
-                font-size: 1.2em;
             }
         }
 }
@@ -954,7 +952,7 @@ body{
     .nomes{
         margin-top: 15%;
         p{
-            font-size: 1em;
+            font-size: .6em;
             
         }
     }
@@ -1019,7 +1017,6 @@ body{
 }
 .secao9::after{
     height: 17.5dvh;
-}
 }
 @keyframes piscar {
   0% {
