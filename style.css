@@ -769,6 +769,10 @@ header{
 body{
     cursor: auto;
 }
+.cursor{
+      width: 0;
+      height: 0;
+}
 .secao1{
     height: 35dvh;
     background-position: center;
