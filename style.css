@@ -921,7 +921,7 @@ body{
         padding-top: 2dvh;
         button{
             
-            font-size: 1em;
+            font-size: .9em;
             padding: .4em;
             }
         }
@@ -930,12 +930,13 @@ body{
 .secao8{
     height: 40dvh;
     .divSoftware{
+    margin-top: 3dvh;
     h1{
-        font-size: 1.7em;
+        font-size: 1.6em;
     }
     .nossoProjeto{
     p{
-        font-size: .75em;
+        font-size: .65em;
         padding-left: 3%;
         padding-right: 3%;
     }
