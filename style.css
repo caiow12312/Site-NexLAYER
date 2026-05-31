@@ -1,0 +1,285 @@
+@font-face {
+    font-family: titulos;
+    src: url(fonts/akira.otf) format('opentype');
+}
+@font-face {
+    font-family: titulos-2;
+    src: url(fonts/bigerside.otf) format('opentype');
+}
+@font-face {
+    font-family: subtitulos;
+    src: url(fonts/bgothl.ttf) format('truetype');
+}
+@font-face {
+    font-family: paragrafos;
+    src: url(fonts/conthrax.otf) format('opentype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    cursor: none;
+    background-color: rgb(194, 188, 188);
+}
+.cursor{
+      position: fixed;
+      width: 1em;
+      height: 1em;
+      background: rgb(35, 35, 35);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      transition: transform 0.05s linear;
+}
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.secaoIncial{
+    justify-content: center;
+    display: flex;
+    position: relative;
+    height: 100dvh;
+    filter:brightness(1.4);
+    .tituloSecao1{
+    height: max-content;
+    width: fit-content;
+    z-index: 1;
+    padding-left: 5%;
+    h1{
+        font-family: paragrafos;
+        letter-spacing: -2px;
+        color: rgb(255, 255, 255);
+        font-size: clamp(.5em, 1em + 4vw + 4vh, 10.5em);
+        }
+}
+    .texto{
+        height: 4dvh;
+        display: flex;
+        padding-left: 5%;
+        width: 100%;
+        z-index: 1;
+        justify-content: left;
+        font-family: subtitulos;
+        color: rgb(255, 255, 255);
+        font-size: clamp(0.5em, 0.5em + 1vw + 1vh, 3em);
+    }
+    .texto::after{
+        border-left: #ededed solid 3px;
+        content: "";
+        animation: piscar .7s infinite;
+    }
+}
+.secaoDocumentacao{
+    height: 100dvh;
+    .divDocNexlayer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    h1{
+        font-family: subtitulos;
+        font-size: 1em;    
+    }
+    p{
+        font-family: paragrafos;
+        font-size: 2.1em;
+    }
+    }
+    .divDocImg{
+    width: 100%;
+    margin-top: 2em;
+    .linkDocs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    p{
+        font-family: paragrafos;
+        font-size: 1.6em;
+        
+    }
+    img{
+        height: 80dvh;
+        filter: brightness(.7);
+        overflow: hidden;
+        box-shadow: 7px 7px 1em rgba(0, 0, 0, 0.6);
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .link1{
+        height: 80dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            .DocsLink1{
+                border-bottom: 1px solid white;
+            }
+        }
+        .DocsLink1{
+            z-index: 1;
+            transition: all .4s;
+            position: absolute;
+            color: rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(136, 136, 136);
+        }
+    }
+    .link2{
+        height: 80dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            .DocsLink2{
+                border-bottom: 1px solid white;
+            }
+        }
+        .DocsLink2{
+            z-index: 1;
+            transition: all .4s;
+            position: absolute;
+            color: rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(136, 136, 136);
+        }
+    }
+    .link3{
+        height: 80dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            .DocsLink3{
+                border-bottom: 1px solid white;
+            }
+        }
+        .DocsLink3{
+            z-index: 1;
+            transition: all .4s;
+            position: absolute;
+            color: rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(136, 136, 136);
+        }
+    }
+    }
+    }
+}
+.secaoCriacao{
+    height:100dvh;
+    .tituloCricao{
+    display: flex;
+    justify-content: center;
+    h1{
+        text-align: center;
+        font-size: 4em;
+        font-family: paragrafos;
+    }
+    }
+    .div-Video{
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+    justify-content: center;
+    video{
+        width: 50dvw;
+        object-fit: cover;
+        box-shadow: 7px 7px 1em rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+    }
+    }
+}
+
+
+@keyframes piscar{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 450px){
+
+.cursor{
+    width: 0;
+    height: 0;
+}
+
+
+
+.secaoIncial{
+    height: calc(50dvh + 1em);
+    .tituloSecao1{
+    h1{
+        font-size: 2.5em;
+        }
+}
+    .texto{
+        height: 2dvh;
+        font-size: 1em
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.secaoDocumentacao{
+    height: max-content;
+    .divDocImg{
+    .linkDocs{
+        flex-direction: column;
+        img{
+            height: 55dvh;
+        }
+        p{
+            font-family: paragrafos;
+            font-size: 100%;
+        }
+        .link1, .link2, .link3{
+            height: 55dvh;
+        }
+        }
+    }
+}
+
+
+
+
+
+
+
+.secaoCriacao{
+    margin-top: 15%;
+    height: 35rem;
+    .tituloCricao{
+    h1{
+        font-size: 2em;
+    }
+    }
+    .div-Video{
+    position: relative;
+    video{
+        width: 80%;
+    }
+    }
+}
+
+}
