@@ -224,8 +224,9 @@ section{
     margin-top: 50px;
     align-items: center;
     justify-content: center;
-    video{
-        width: 50dvw;
+    iframe{
+        width: 840px;
+        height: 472px;
         object-fit: cover;
         box-shadow: 7px 7px 1em rgba(0, 0, 0, 0.6);
         border-radius: 5px;
@@ -422,12 +423,17 @@ section{
     }
 }
 
-@media screen and (max-width: 450px){
 
+@media screen and (max-width: 1170px){
+body{
+    cursor: auto;
+}
 .cursor{
     width: 0;
     height: 0;
 }
+}
+@media screen and (max-width: 450px){
 
 .secaoIncial{
     height: calc(50dvh + 1em);
@@ -471,8 +477,9 @@ section{
     }
     .div-Video{
     position: relative;
-    video{
+    iframe{
         width: 80%;
+        height: 45%;
     }
     }
 }
